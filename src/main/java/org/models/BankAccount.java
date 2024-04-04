@@ -14,6 +14,14 @@ public class BankAccount {
         this.balance = balance;
     }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
     public synchronized double getBalance() {
         return this.balance;
     }
