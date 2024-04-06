@@ -15,7 +15,7 @@ public class Main {
 
         ThreadGroup regularClients = new ThreadGroup("Regular Clients");
         ThreadGroup vipClients = new ThreadGroup("VIP Clients");
-        
+
         for (int i = 0; i < 5; i++) {
             new Thread(regularClients, new User(bank, "123456"), "Client " + i).start();
         }
