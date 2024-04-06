@@ -38,7 +38,8 @@ public class BankAccount {
                     throw new InterruptedException("Insufficient balance");
             }else{
                 this.balance = this.balance - amount;
-                System.out.println("Withdrew: " + amount + ", New Balance: " + this.balance);
+                System.out.println("Withdrew amount is : " + amount);
+                System.out.println("Your new balance is : " + this.balance);
             }
         }  catch (InterruptedException e) {
             throw new RuntimeException(e);

@@ -14,16 +14,14 @@ public class User implements Runnable {
         try {
             BankAccount account = bank.getAccount(accountNumber);
 
-            //Deposit a Random Amount
             account.depositAmount(Math.random() * 1000);
 
-            //Withdraw an amount
             account.withdrawAmount(3000);
 
             System.out.println("Balance: " + account.getBalance());
         } catch (Exception e) {
-            Thread.currentThread().interrupt();
             System.out.println("Error: " + e.getMessage());
+            Thread.currentThread().interrupt();
         }
     }
 }
